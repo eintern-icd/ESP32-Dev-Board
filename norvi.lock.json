@@ -2,8 +2,19 @@
   "version": 2,
   "enforcementLevel": "strict",
   "libraries": {
-    "manager": [],
-    "managerResolved": [],
+    "manager": [
+      {
+        "name": "Adafruit NeoPixel",
+        "version": "1.15.5",
+        "scope": "shared"
+      }
+    ],
+    "managerResolved": [
+      {
+        "name": "Adafruit NeoPixel",
+        "version": "1.15.5"
+      }
+    ],
     "git": []
   }
 }
