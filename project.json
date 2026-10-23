@@ -1,0 +1,12 @@
+{
+  "userId": "u_4886111579d6765a",
+  "projectId": "ESP32-Dev-Board",
+  "name": "ESP32-Dev-Board",
+  "board": {
+    "fqbn": "esp32:esp32:esp32"
+  },
+  "selections": null,
+  "serial": null,
+  "createdAt": "2026-10-23T05:28:08.975Z",
+  "updatedAt": "2026-10-23T05:28:08.975Z"
+}
