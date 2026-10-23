@@ -1,29 +1,25 @@
-#include <Adafruit_NeoPixel.h>
-
-#define PIN        18 // Onboard RGB LED pin on ESP32-S2-DevKitM-1 / ESP32-S2 Mini boards
-#define NUMPIXELS 1   // Typically 1 onboard WS2812 RGB LED
-
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+const int ledPins[] = {1, 2, 3, 4}; // 4 consecutive GPIO pins (GPIO 1, 2, 3, 4)
+const int numLeds = 4;
+int delayTime = 90; // Speed of the Knight Rider scanner
 
 void setup() {
-  pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
+  for (int i = 0; i < numLeds; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
 }
 
 void loop() {
-  pixels.clear(); // Set all pixel colors to 'off'
+  // Scan forward: LED 1 -> 2 -> 3 -> 4
+  for (int i = 0; i < numLeds; i++) {
+    digitalWrite(ledPins[i], HIGH);
+    delay(delayTime);
+    digitalWrite(ledPins[i], LOW);
+  }
 
-  // Set to green
-  pixels.setPixelColor(0, pixels.Color(0, 150, 0));
-  pixels.show();   
-  delay(1000); 
-
-  // Set to blue
-  pixels.setPixelColor(0, pixels.Color(0, 0, 150));
-  pixels.show();
-  delay(1000);
-
-  // Set to red
-  pixels.setPixelColor(0, pixels.Color(150, 0, 0));
-  pixels.show();
-  delay(1000);
+  // Scan backward: LED 3 -> 2
+  for (int i = numLeds - 2; i > 0; i--) {
+    digitalWrite(ledPins[i], HIGH);
+    delay(delayTime);
+    digitalWrite(ledPins[i], LOW);
+  }
 }
