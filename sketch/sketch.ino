@@ -10,7 +10,7 @@ void setup() {
 
 void loop() {
   // Scan forward: LED 1 -> 2 -> 3 -> 4
-  for (int i = 0; i < numLeds; i++) {
+ /* for (int i = 0; i < numLeds; i++) {
     digitalWrite(ledPins[i], HIGH);
     delay(delayTime);
     digitalWrite(ledPins[i], LOW);
@@ -21,5 +21,5 @@ void loop() {
     digitalWrite(ledPins[i], HIGH);
     delay(delayTime);
     digitalWrite(ledPins[i], LOW);
-  }
+  }*/
 }
