@@ -4,10 +4,10 @@ const int leds[] = {1, 2, 3, 4};
 const int numLeds = 4;
 
 void setup() {
-  for (int i = 0; i < numLeds; i++) {
+ /* for (int i = 0; i < numLeds; i++) {
     pinMode(leds[i], OUTPUT);
     digitalWrite(leds[i], LOW);
-  }
+  }*/
 }
 
 void clearLeds() {
@@ -97,7 +97,7 @@ void alternatingFlashes(int speedMs, int cycles) {
 
 void loop() {
   // 1. Blink GPIO 1 & 2 twice
-  blinkGpio1and2Twice();
+ /* blinkGpio1and2Twice();
   delay(100);
 
   // 2. Blink GPIO 3 & 4 twice
@@ -111,4 +111,5 @@ void loop() {
 
   clearLeds();
   delay(300); // Brief pause before repeating full loop
+  */
 }
