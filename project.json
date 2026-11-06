@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "name": "ESP32-Dev-Project",
+  "name": "ESP32-Dev-Board",
   "target": {
     "framework": "arduino",
     "board": "esp32:esp32:esp32s2",
@@ -29,5 +29,5 @@
     "properties": []
   },
   "createdAt": "2026-10-23T05:28:08.975Z",
-  "updatedAt": "2026-11-06T09:31:27.267Z"
+  "updatedAt": "2026-11-02T06:40:31.609Z"
 }
