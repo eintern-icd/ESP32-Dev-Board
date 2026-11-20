@@ -5,13 +5,13 @@
     "framework": "arduino",
     "board": "esp32:esp32:esp32s2",
     "options": {
-      "CDCOnBoot": "cdc",
+      "CDCOnBoot": "default",
       "CPUFreq": "240",
       "DebugLevel": "none",
       "DFUOnBoot": "default",
       "EraseFlash": "none",
-      "FlashFreq": "80",
-      "FlashMode": "qio",
+      "FlashFreq": "40",
+      "FlashMode": "dio",
       "FlashSize": "4M",
       "JTAGAdapter": "default",
       "MSCOnBoot": "default",
@@ -29,5 +29,5 @@
     "properties": []
   },
   "createdAt": "2026-10-23T05:28:08.975Z",
-  "updatedAt": "2026-11-10T06:26:21.037Z"
+  "updatedAt": "2026-11-20T12:54:15.418Z"
 }
